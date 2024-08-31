@@ -225,7 +225,22 @@ body {
 
 }
 
+/* Barra navegacion mobil */
 
+.barra_navegacion_tres{
+    font-family: 'lato';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #868693;
+    height: 10vh;
+    padding: 0 20px;
+    font-size: 15px;
+    z-index: 3;
+    /* box-shadow: -1px -12px 9px 20px rgb(0 0 0 / 67%); */
+    position: relative;
+    font-size: 1.3vh;
+}
 
 
 
@@ -756,6 +771,14 @@ button:hover {
     height: auto;
 }
 
+@media (min-width: 375px) and (min-height: 667px) {
+
+   .barra_navegacion_uno, .barra_navegacion_dos{
+    display: none;
+   }
+ }
+
+
 @media (min-width: 800px) and (min-height: 600px) {
     .logo-unillanos {
         transform: translateY(10%);
@@ -778,16 +801,43 @@ button:hover {
 
 @media (min-width: 1128px) and (min-height: 634px) {
 
+    .barra_navegacion_uno {
+        height: 4vh;
+    }
+
     .logo-unillanos {
-        transform: translateY(12%);
-        width: 11vw;
+        transform: translateY(11%);
+        width: 12vw;
     }
 
     .diplomado-card{
         margin: 5% 10%;
     }
-  
+
+    .diplomado-content {
+        gap: 3%;
+    }
+
+    .form-group label {
+        top: -4.7vh;
+        left: -0.5vw;
+    }
+
+    .form-group {
+        margin-bottom: 8.7vh;
+    }
+
+    .form-group input {
+        height: 4.5vh;
+    }
+
+    button {
+        padding: 1vh 3vw;
+        font-size: 2.1vh;
+    }
+
 }
+
 
 @media (min-width: 1280px) and (min-height: 1024px) {
 
@@ -834,15 +884,4 @@ button:hover {
      }
  }
 
-/* @media (min-width: 1300px) {
-    .logo-unillanos {width: 12vw;}
-} */
-
-/* @media (min-width: 1400px) {
-    .logo-unillanos {width: 11vw;}
-}
-
-@media (min-width: 1600px) {
-    .logo-unillanos {width: 10vw;}
-} */
 
