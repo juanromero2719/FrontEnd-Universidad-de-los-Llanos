@@ -43,6 +43,36 @@ body {
 
 /* NavBar Redes Sociales */
 
+.cursosofertas,
+.cursosofertasmobil {
+    display: none; 
+}
+    
+.diplomado-card-mobil {
+    font-family: 'latoregular';
+    display: flex; 
+    width: 80%;
+    background-color: #f5f4f8;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px 100px;
+    flex-direction: column;
+    
+}
+
+
+.banner {
+        position: relative;
+        background-image: url('images/bannerecmobil.png');
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: center; 
+        width: 100%;
+        aspect-ratio: 380 / 419;    
+}
+
+
+
 .barra_navegacion_uno{
     display: flex;
     justify-content: flex-end;
@@ -87,7 +117,6 @@ body {
     font-size: 12px;
     margin-left:5px;
     margin-right:5px;
-    display: flex;
     align-items: center;
 }
 
@@ -241,19 +270,13 @@ body {
 }
 
 .logo-unillanos {
-    /* top:2vh; */
-    /* width:15vw; */
     position: relative;
     z-index:10;
+    max-width:500px;
 }
 
 
 /* Body */
-
-.banner-dos{
- margin-bottom:7%;
-
-}
 
 main{
     width:100%;
@@ -279,7 +302,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
 }
 
 
@@ -375,6 +397,7 @@ main{
     text-decoration: none;
     border-radius: 5px; 
     font-family: 'latolight';
+    font-size: 3.7vw;
 }
 
 .boton:hover {
@@ -433,7 +456,7 @@ main{
 
 .contenido_overlay h3 {
     color:#8B0000;
-    font-size: 4.4vh; 
+    font-size: 3vw; 
     margin-right: 2vw; /* Espacio entre el texto y el botón */
     line-height: 0.9;
 }
@@ -570,19 +593,20 @@ main{
 }
 
 .form-group {
-    margin-bottom: 5.7vh;
+    margin-bottom: 13%;
     position: relative;
 }
 
 .form-group label {
    
-    font-size:1.3vw;
+    font-size:3.3vw;
     position: absolute;
-    top: -2.7vh;
+    top: -70%;
     left: -0.6vw;
     padding: 0 5px;
     font-weight: bold;
 }
+
 
 .form-group input,
 .form-group textarea {
@@ -594,6 +618,7 @@ main{
     border-top: none; /* Eliminar borde superior */
     border-radius: 0px;
     outline: none; /* Eliminar el borde al enfocar */
+    height: 8vw;
 }
 
 .form-group input:focus,
@@ -610,12 +635,9 @@ main{
     flex: 1;
 }
 
-.form-group input {
-    height: 3.5vh;
-}
 
 .form-group textarea {
-    height: 12vh;
+    /* height: 12vh; */
     resize: none;
 }
 
@@ -758,33 +780,88 @@ button:hover {
     height: auto;
 } */
 
-@media (min-width: 375px) and (min-height: 667px) {
+@media (min-width: 1000px) {
 
-   .barra_navegacion_uno, .barra_navegacion_dos{
-    display: none;
-   }
- }
-
-
-@media (min-width: 800px) and (min-height: 600px) {
-
-    .logo-unillanos {
-        transform: translateY(10%);
-        width: 14vw;
+    .banner{
+        aspect-ratio: 1920/823 !important;
     }
 
-}
+    .cursosofertas {
+        display: block;
+    }
 
-@media (max-width: 900px) {
-
-    .busqueda input, button {
+    .barra_navegacion_tres{
         display: none;
-
     }
+
+
+    .boton{
+        font-size: 1.7vw;
+    }
+
+    .banner-tres{
+        position: relative;
+        background-image: url('images/banner3.jpg');
+        background-size: cover; 
+        background-position: center; 
+        aspect-ratio: 1920 / 296; 
+        width:100%;
+   
+    }
+
+    .contenido_overlay h3 {
+        color: #8B0000;
+        font-size: 3vw;
+        margin-right: 2vw;
+        line-height: 0.9;
+    }
+
+    .banner-cuatro{
+        position: relative;
+
+        background-image: url('images/banner4.jpg');
+        background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen */      
+        width:100%;
+        aspect-ratio: 1920 / 537; 
+        background-repeat:repeat;
+        background-size: cover;
+    }
+
+    .contenido_overlay_left h2 {
+        margin-bottom: 4%;
+    }
+
+    .banner-cinco{
+        background-image: url('images/bannerform.jpg');     
+        width:100%; 
+        aspect-ratio:1920/989;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+    }
+
+    .form-group textarea {
+        height: 7vh;
+    }
+
+    .contenido_overlay_form {
+        padding: 40px;
+    }
+
 }
 
-@media (min-width: 1024px) and (min-height: 768px) {
-   
+@media (min-width: 601px){
+
+    .diplomado-card{
+        width:100%;
+    }
+
+    .info{
+        margin-bottom:10%;
+    }
+  
 }
 
 @media (min-width: 1128px) and (min-height: 634px) {
@@ -793,167 +870,38 @@ button:hover {
         height: 4vh;
     }
 
-    .logo-unillanos {
-        transform: translateY(11%);
-        width: 12vw;
-    }
-
-    .diplomado-card{
-        margin: 5% 10%;
-    }
-
-    .diplomado-content {
-        gap: 3%;
-    }
-
-    .form-group label {
-        top: -4.7vh;
-        left: -0.5vw;
-    }
-
-    .form-group {
-        margin-bottom: 8.7vh;
-    }
-
-    .form-group input {
-        height: 4.5vh;
-    }
-
     button {
-        padding: 1vh 3vw;
+        padding: 0.5vh 2.5vw;
         font-size: 2.1vh;
     }
 
 }
 
+@media (max-width: 999px){
 
-@media (min-width: 1280px) and (min-height: 1024px) {
+    .busqueda input, button {
+        display: none;
 
-   .logo-unillanos{
-        transform: translateY(11%);
-        width: 15vw;
-   }
-
-   .form-group label {
-        top: -3.9vh;
-        left: -0.5vw;
     }
 
-    .form-group input {
-        height: 5.5vh;
+    .cursosofertasmobil {
+     
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     
     }
-}
-
-@media (min-width: 1280px) and (min-height: 720px) {
-
-    .form-group label {
-         top: -3.9vh;
-         left: -0.5vw;
-     }
- 
-     .form-group input {
-         height: 5.5vh;
-     }
-}
-
-@media (min-width: 1680px) and (min-height: 1050px) {
-
-    .logo-unillanos{
-        transform: translateY(11%);
-        width: 12vw;
-   }
-
-    .form-group label {
-        top: -3.7vh;
-     }
- 
-     .form-group input {
-         height: 4.5vh;
-     }
-}
-
-@media (max-width: 720px) and (max-height: 1280px) {
-
-    .titulo{
-       font-size:3vh; 
-    }
-
-    .subtitulo{
-        font-size:2vh; 
-    }
-
-    .descripcion{
-        font-size:1vh; 
-    }
-
-    .info p strong {
-        font-size: 1.1vh;
-    }
-
-    .info p{
-        font-size: 1vh;
-    }
-
-    .separator {
-        height: 30px;
-    }
-
-    .boton{
-        font-size: 1.5vh;
-        padding: 4px 10px;
-    }
-
-    
-}
-
-@media (max-width: 600px){
 
     .cursosofertas{
         display: none;
     }
 
-}
-
-@media (min-width: 800px) {
-    .cursosofertasmobil {
-        background-image: url('images/bannerprincipal.jpg');
-    }
-}
-
-@media (min-width: 600px) and (max-width: 799px) {
-    .banner {
-        background-image: url('images/bannermainseisaocho.jpg'); 
-        border: 1px solid purple ;   
-    }
-}
-
-@media (min-width: 601px){
-
-    .cursosofertasmobil{
-        display: none;
-    }
-}
-
-@media (max-width: 800px){
-
-    .banner {
-        background-image: url('images/bannerecmobil.png'); 
-        border: 1px solid red ;   
-    }
-}
-
-
-@media (max-width: 1000px){
+    .barra_navegacion_uno, .barra_navegacion_dos{
+    display: none;
+   }
 
     .barra_navegacion_uno, .barra_navegacion_dos{
         display: none;
-    }
-
-    .banner{
-        background-image: url('images/bannermain.jpg');      
-        background-size: cover;
-        background-position: center;
-        border: 1px solid green; 
     }
 
     .diplomado-card-mobil {
@@ -963,19 +911,19 @@ button:hover {
         background-color: #f5f4f8;
         border-radius: 30px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin: auto 100px;
+        margin: 10% 100px;
         flex-direction: column;
     }
 
     .titulo-mobil{
         color: #991B1E;
-        font-size: 3vh;
+        font-size: 5vw;
         font-family: 'lato';
         margin: 10% 0 0.4vh 3%;
     }
 
     .subtitulo-mobil {
-        font-size: 2vh;
+        font-size: 4vw;
         color: black;
         margin-bottom: 1vh;
         font-family: 'latolight';
@@ -990,22 +938,21 @@ button:hover {
     }
 
     .descripcion-mobil {
-        font-size: 1.6vh;
+        font-size: 2.9vw;
         padding: 0 5%;
         margin:5% 0;
     }
 
     .info {
-        margin: 0 5%;
         justify-content: space-evenly;
     }
 
     .info p strong {
-        font-size: 1.7vh;
+        font-size: 3.7vw;
     }
 
     .info p {
-        font-size: 1.6vh;
+        font-size: 2.9vw;
     }
 
     .separator{
@@ -1014,7 +961,7 @@ button:hover {
 
     .diplomado-content-mobil .boton{
 
-        font-size: 1.7vh;
+        font-size: 3.7vw;
         padding: 4px 18px;
         margin: 5% 0 8% 4%;
     }
@@ -1025,7 +972,9 @@ button:hover {
         background-image: url('images/banner-posgradosmobil.jpg');
         background-size: cover; 
         background-position: center; 
-        height: 180px;
+        aspect-ratio: 380 / 180; 
+        width:100%;
+   
     }
 
     .banner-tres img{
@@ -1054,14 +1003,20 @@ button:hover {
     }
     
     .contenido_overlay h3 {
-        font-size: 1.5rem;
+        font-size: 7vw;
         margin-bottom: 20px;
     }
 
     .banner-cuatro{
-        background-image: url('images/banner-idiomasmobil.jpg');      
-        height:380px;
-        background-repeat: no-repeat;
+        position: relative;
+
+        background-image: url('images/banner-idiomasmobil.jpg');
+        background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen */      
+        width:100%;
+        aspect-ratio: 380 / 380; 
+        background-repeat:repeat;
         background-size: cover;
     }
 
@@ -1069,10 +1024,8 @@ button:hover {
         align-items: flex-start;
     }
 
-    
-
     .contenido_overlay_left h2 {
-        font-size: 2vh;
+        font-size: 3.5vw;
         margin-bottom:8%;
     }
 
@@ -1085,13 +1038,14 @@ button:hover {
     .contenido_overlay_left h3 {
         text-align: left;
         color: white;
-        font-size: 4vh;
+        font-size: 7vw;
         margin-right: 0px;
     }
 
     .banner-cinco{
-        background-image: url('images/bannerformmobil.jpg');      
-        height:660px;
+        background-image: url('images/bannerformmobil.jpg');     
+        width:100%; 
+        aspect-ratio:380/760 ;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center; 
@@ -1110,20 +1064,15 @@ button:hover {
     }
 
     .contenido_overlay_form h3 {
-        font-size: 3vh;
+        font-size: 6vw;
     }
 
     .contenido_overlay_form h2 {
-        font-size: 1.6vh;
+        font-size: 3.3vw;
         text-align: center;
         margin-bottom: 20%;
     }
 
-    .form-group label {
-        font-size: 1.6vh;
-        left: -1vw;
-  
-    }
 
     .form-row {
         flex-direction: column;
@@ -1132,6 +1081,7 @@ button:hover {
     button {
         display:flex;
         padding: 0.7vh 8vw;
+        font-size: 3.7vw;
     }
 
     .form-group.form-button {
@@ -1146,8 +1096,8 @@ button:hover {
         padding: 20px;
         background-color: #272526;
         font-family: lato;
-        font-size: 0.6rem;
-        column-gap: 10%;
+        font-size: 2vw;
+        column-gap: 15%;
     }
     
     .footer-section {
@@ -1196,8 +1146,8 @@ button:hover {
     .footer-bottom .footer-bottom-container {
         display: flex;
         font-weight: bold;
-        font-size: 10px;
-        line-height: 1.7;
+        font-size: 2vw;
+        line-height: 1.7vh;
         justify-content: space-between;
         width: 95%;
         max-width: 1700px;
@@ -1205,6 +1155,7 @@ button:hover {
         padding: 0 20px;
         flex-direction: column;
         flex-wrap: wrap;
+        align-items: center;
     }
 
     .footer-bottom .footer-info {                                           
@@ -1223,15 +1174,13 @@ button:hover {
         flex: 0.5;
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+        width:80%;
     }
 
     .footer-bottom .footer-logo img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
     } 
-
-   
 
     .logo{
         max-width:6rem;
@@ -1317,31 +1266,180 @@ button:hover {
 
     }
 
+}
+
+@media (min-width: 1000px) and (max-height: 1280px) {
+
+    .logo-unillanos {
+        width:20vh;
+        transform: translateY(5%);
+    }
+
+    .titulo{
+       font-size:3.2vw; 
+    }
+
+    .subtitulo{
+        font-size:2.7vw; 
+    }
+
+    .descripcion{
+        font-size:1.2vw; 
+    }
+
+    .info p strong {
+        font-size: 1.5vw;
+    }
+
+    .info p{
+        font-size: 1.2vw;
+    }
+
+    .separator {
+        height: 100%;
+        margin: 12px
+    }
+
+    .boton{
+        font-size: 1.7vw;
+        padding: 4px 18px;
+    }
+
+    .form-group label {
+        font-size: 1.1vw;
+        top: -47%;
+    }
+
+    .form-group input, .form-group textarea {
+        height: 4vw;
+    }
+
+    .diplomado-card {
+        width: 80%;
+        margin-top:5%;
+        margin-bottom: 5%;
+    }
+
+    .contenido_overlay a{
+        font-size: 1.2vw;
+        padding: 7px 18px
+    }
+
+    .footer {
+        background-color: #272526;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.8vw;
+        color: #fff;
+        padding: 2% 10%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 7%;
+    }
+   
+    .footer-section {
+        flex: 1 1 20%;
+        margin: 10px;
+    }
     
-
-
-}
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
     
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
 
+    
+    
+    .footer-section ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-section ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    .footer-logos {
+        flex: 1 1 40%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .footer-logos img {
+        margin: 5px;
+        max-height: 50px;
+        max-width: 100px;
+        height: auto;
+        width: 20%;
+    }
 
-.diplomado-card-mobil {
-    font-family: 'lato';
-    display: flex; 
-    width: 80%;
-    background-color: #f5f4f8;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 10% auto;
+    .footer-section{
+        border-top: 2px solid red;
+        padding-top: 2%;
+        width: 60%;
+    }
+
+    .footer-section:nth-child(4){
+        border-top: 2px solid red;
+        margin: 0.5%;
+        padding-top: 1%;
+        width: 60%;
+    }
+
+    .footer-bottom {
+        background-color: #272526;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.8vw;
+        color: #fff;
+        padding: 2% 5%;
+        display: flex;
+        justify-content: center;
+        /* line-height:18px; */
+        gap: 7%;
+    }
+    
+    .footer-bottom-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .footer-info {
+        flex: 1 1 30%;
+        /* margin: 10px; */
+    }
+
+    .footer-info p{
+        margin-bottom: 10px;
+    }
+    
+    
+    .footer-logo {
+        flex: 1 1 20%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 10px;
+    }
+    
+    .footer-logo img {
+        height: auto;
+        width: auto;
+    }
+
 }
 
-.banner {
-    position: relative;
-    background-image: url('images/bannerecmobil.png');    
-    background-size: cover;
-    background-position: center;
-    width: auto;
-    height: 445px; /* Ajusta la altura según tus necesidades */
-}
+
+
+
 
 
 

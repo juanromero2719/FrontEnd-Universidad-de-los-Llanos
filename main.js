@@ -16,10 +16,8 @@ function updateBannerImage() {
     const banner = document.querySelector('.banner');
     const width = window.innerWidth;
 
-    if (width >= 801) {
+    if (width >= 1000) {
         banner.style.backgroundImage = "url('images/bannermain.jpg')";
-    } else if (width >= 601) {
-        banner.style.backgroundImage = "url('images/prueba.jpg')";
     } else {
         banner.style.backgroundImage = "url('images/bannerecmobil.png')";
     }
