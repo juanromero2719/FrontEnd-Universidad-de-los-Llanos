@@ -24,7 +24,7 @@
                     <a target="_blank" href="https://www.youtube.com/c/UnillanosTelevis i%C3%B3n" class="iconos_redes_sociales"><img src="images/youtube.svg" alt="Icono de YouTube"></a>
                 </div>
 
-                <div class="lenguaje">
+                <!-- <div class="lenguaje">
                     <span class="opciones-lenguaje">esp</span>
                     <span class="opciones-lenguaje">eng</span>
                 </div>
@@ -34,7 +34,7 @@
                         <input type="text">
                         <button type="submit"><img src="images/search.png" alt="Icono de Buscar"></button>
                     </form>
-                </div>
+                </div> -->
 
             </div>
 
@@ -46,16 +46,16 @@
 
             <div class="navegacion">
 
-                <a href="#" class="nav-link">INICIO</a>
-                <a href="#" class="nav-link"><span>CURSOS<br>DIPLOMADOS</span></a>
-                <a href="#" class="nav-link">EVENTOS</a>
+                <a href="#cursos-eventos" class="nav-link">EVENTOS</a>
+                <a href="#cursos-educacion" class="nav-link"><span>EDUCACION<br>CONTINUA</span></a>
+                <a href="#postgrados" class="nav-link">POSTGRADOS</a>
                 
                 <div class="logo-container">
                      <img class="logo-unillanos" src="images/logo-sombra.svg" alt="Logo Universidad de los Llanos"> 
                 </div>
 
-                <a href="#" class="nav-link">INSCRIPCIÓN</a>
-                <a href="#" class="nav-link">CONTACTO</a>
+                <a href="#idiomas" class="nav-link">CENTRO DE<br> IDIOMAS</a>
+                <a href="#contacto" class="nav-link">CONTACTO</a>
 
             </div> 
 
@@ -71,13 +71,12 @@
             <img class="logo" src="images/logounillanos.png" alt="Logo Unillanos">
             <a class="abrir-menu" id="abrir"></a>
             <nav class="nav-lista" id="nav">
-                <button id="cerrar">Cerrar</button>
                 <ul class="nav-list">
-                    <li><a href="#">INICIO</a></li>
-                    <li><a href="#">CURSOS</a></li>
-                    <li><a href="#">EVENTOS</a></li>
-                    <li><a href="#">INSCRIPCION</a></li>
-                    <li><a href="#">CONTACTO</a></li>
+                    <li><a href="#cursos-eventos-mobil">EVENTOS</a></li>
+                    <li><a href="#cursos-educacion-mobil">EDUCACION CONTINUA</a></li>
+                    <li><a href="#postgrados">POSTGRADOS</a></li>
+                    <li><a href="#idiomas">CENTRO DE IDIOMAS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
                 </ul>
             </nav>
         </nav>
@@ -99,9 +98,9 @@
 
     <!-- cursos a ofertar -->
 
-    <section class="cursosofertas">
+    <section id="cursos-eventos" class="cursosofertas">
 
-        <div class="diplomado-card">
+        <!-- <div class="diplomado-card">
             <div class="diplomado-content">
                 <h2 class="titulo">Diplomado</h2>
                 <h3 class="subtitulo">Marketing Digital Disruptivo</h3>
@@ -123,13 +122,13 @@
                 
                 <img src="images/error.avif" alt="Marketing Digital Disruptivo">
             </div>
-        </div>
+        </div> -->
 
     </section> 
 
-    <section class="cursosofertasmobil">
+    <section id="cursos-eventos-mobil" class="cursosofertasmobil">
 
-        <div class="diplomado-card-mobil">
+        <!-- <div class="diplomado-card-mobil">
 
             <div class="diplomado-content-mobil">
                     <h2 class="titulo-mobil">Diplomado</h2>
@@ -157,13 +156,13 @@
                 <a href="#" class="boton">Leer más</a>
 
             </div>
-        </div> 
+        </div>  -->
 
     </section>
 
     <!-- banner universidad  -->
 
-    <section class="banner-tres">
+    <section id="postgrados" class="banner-tres">
 
         <div class="overlay">
             <div class="contenido_overlay">
@@ -179,9 +178,9 @@
 
     <!-- cursos a ofertar -->
 
-    <section class="cursosofertas">
+    <section id="cursos-educacion" class="cursosofertas">
         
-        <div class="diplomado-card">
+        <!-- <div class="diplomado-card">
             <div class="diplomado-content">
                 <h2 class="titulo">Diplomado</h2>
                 <h3 class="subtitulo">Marketing Digital Disruptivo</h3>
@@ -203,13 +202,13 @@
                 
                 <img src="images/error.avif" alt="Marketing Digital Disruptivo">
             </div>
-        </div>
+        </div> -->
 
     </section>
 
-    <section class="cursosofertasmobil">
+    <section  id="cursos-educacion-mobil" class="cursosofertasmobil">
 
-        <div class="diplomado-card-mobil">
+        <!-- <div class="diplomado-card-mobil">
 
             <div class="diplomado-content-mobil">
                     <h2 class="titulo-mobil">Diplomado</h2>
@@ -237,13 +236,13 @@
                 <a href="#" class="boton">Leer más</a>
 
             </div>
-        </div> 
+        </div>  -->
 
     </section>
 
     <!-- banner centro de idiomas -->
 
-    <section class="banner-cuatro">
+    <section id="idiomas" class="banner-cuatro">
 
         <!-- <img class="imagenes_banner" src="images/banner4.jpg" alt="Banner Personas charlando"> -->
         
@@ -261,13 +260,13 @@
     
     <!-- banner contacto -->
 
-    <section class="banner-cinco">
+    <section id="contacto" class="banner-cinco">
        
             <!-- <img class="imagenes_banner" src="images/bannerform.jpg" alt="Banner estudiantes"> -->
             
             <div class="overlay_form">
                 <div class="contenido_overlay_form">
-                    <form action="post" class="form-overlay">
+                    <form action="send_email.php" method="post" class="form-overlay">
                         <h3 class="titulo_form">Déjanos tus datos</h3>
                          <h2>Si necesitas más información sobre nuestros cursos, diplomados 
                             o eventos, diligencia el siguiente formulario</h2>
